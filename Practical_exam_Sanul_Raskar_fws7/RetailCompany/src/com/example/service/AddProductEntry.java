@@ -19,6 +19,13 @@ public class AddProductEntry {
 		foodItems.add(new FoodItems(1003, "Curd", 30, 50, "23/03/2020", "24/04/2020", true));
 		foodItems.add(new FoodItems(1004, "Cake", 200, 8, "23/03/2020", "24/04/2020", true));
 		foodItems.add(new FoodItems(1005, "Chicken", 250, 2, "23/03/2020", "24/04/2020", false));
+		
+		try {
+			productDaoImplObj.insertProduct(foodItems, category);
+		}
+		catch(CategoryDoesNotExistsException e) {
+			
+		}
 	}
 
 	public void addApparelProducts() {
